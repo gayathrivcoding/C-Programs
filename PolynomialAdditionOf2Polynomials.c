@@ -105,88 +105,76 @@ int main()
  
   printf("\n\n");// next line for printing the arrays
          
-    
-    
-    
-         
-   if(poly1[d1]==0 && poly2 [d2] == 0)
-    
-   printf("Nothing to Calculate");
-   
-   else //main else
-    {
-       
+
+
              printf("The First Polynomial is:\n");
              for(i=d1;i>=0;i--)
              {
-             if(poly1[i]!=0)
-             {
-                 if(i==d1)
+                 if(poly1[i]!=0) //first if
                  {
+                      if(i==d1)
+                        {
                     
-                     if( i!=0 && i!=1)
-                     printf("\t%d X^%d  ",poly1[i],i);
-                     else if(i==1)
-                     printf("\t%d X  ",poly1[i]);
-                     else 
-                     printf("\t%d  ",poly1[i]);
-                 }
+                               if( i!=0 && i!=1){
+                                   printf("\t%d X^%d  ",poly1[i],i); }
+                               else if(i==1){
+                                   printf("\t%d X  ",poly1[i]);}
+                                else {
+                                    printf("\t%d  ",poly1[i]);}
+                        }
                 
-                else if(i==1)
-                printf("+  %d X  ", poly1[i]);
+                       else if(i==1) {
+                       printf("+  %d X  ", poly1[i]); }
         
-                else if(i==0)
-                printf("+  %d  ", poly1[i]);
+                       else if(i==0) {
+                       printf("+  %d  ", poly1[i]); }
                 
-                else
-                printf("+  %d X^%d  ",poly1[i],i);
+                       else {
+                       printf("+  %d X^%d  ",poly1[i],i); }
                 
-               }
+                 }//first if closing
              
-              else
-              printf("");
+                 else{
+                    printf("");}
              }//for closing
          
          
              printf("\n\n"); // new line after first polynomial
  
  
-              printf("The Second Polynomial is:\n");
-              for(i=d2;i>=0;i--)
-              {
-              if(poly2[i]!=0)
-              {
+             printf("The Second Polynomial is:\n");
+             for(i=d2;i>=0;i--){
+
+               if(poly2[i]!=0){
                 
-                  if(i==d2)
-                 {
+                   if(i==d2)
+                   {
                     
-                     if( i!=0 && i!=1)
-                     printf("\t%d X^%d  ",poly2[i],i);
-                     else if(i==1)
-                     printf("\t%d X  ",poly2[i]);
-                     else 
-                     printf("\t%d  ",poly2[i]);
-                 }
+                       if( i!=0 && i!=1)
+                           printf("\t%d X^%d  ",poly2[i],i);
+                       else if(i==1)
+                           printf("\t%d X  ",poly2[i]);
+                       else
+                         printf("\t%d  ",poly2[i]);
+                   }
                 
-                else if(i==1)
-                printf("+  %d X  ", poly2[i]);
+                   else if(i==1)
+                      printf("+  %d X  ", poly2[i]);
         
-                else if(i==0)
-                printf("+  %d  ", poly2[i]);
+                   else if(i==0)
+                      printf("+  %d  ", poly2[i]);
                 
-                else
-                printf("+  %d X^%d  ",poly2[i],i);
+                   else
+                      printf("+  %d X^%d  ",poly2[i],i);
                 
                 }
              
-                else
-                printf("");
+               else
+                  printf("");
              
-                 }//for closing
+             }//for closing
          
-   
-   
-                  printf("\n\n");  // new line after second polynomial
+             printf("\n\n");  // new line after second polynomial
          
      
     
@@ -196,13 +184,13 @@ int main()
 if(d1>d2)
 {
 		 for(i=0;i<=d2;i++)
-		  {
-			poly3[i] = poly1[i] + poly2[i];
-		  }
+		   {
+			  poly3[i] = poly1[i] + poly2[i];
+		   }
 		  
 		  for(i=d2+1;i<=d1;i++)
 		  {
-			poly3[i] = poly1[i];
+			  poly3[i] = poly1[i];
 		
 		  }
 
@@ -384,7 +372,7 @@ else
    
    
    
-}//main else closing
+
     
 printf("\n\n");
 }
